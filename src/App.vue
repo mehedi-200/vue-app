@@ -1,20 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="wrap">
+  <router-link class="btn btn-primary btn-brand-primary me-3 mb-3" to="/home">Home</router-link>
+  <router-link class="btn btn-primary btn-brand-primary me-3 mb-3" to="/about">About</router-link>
+  <router-link class="btn btn-primary btn-brand-primary me-3 mb-3" to="/throttle">Throttle</router-link>
+  <router-link class="btn btn-primary btn-brand-primary mb-3" to="/xss">Xss Protection</router-link>
+</div>
+
+  <div class="view w-50 m-auto">
+    <router-view></router-view>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+
 }
 </script>
 
 <style>
+body{
+  background: black;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
